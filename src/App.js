@@ -1,15 +1,17 @@
-import './App.css'
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import "./App.css";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import Home from './pages/home/Home';
-import Recipe from './pages/recipe/Recipe';
-import Search from './pages/search/Search';
-import Create from './pages/create/Create';
+import Home from "./pages/home/Home";
+import Recipe from "./pages/recipe/Recipe";
+import Search from "./pages/search/Search";
+import Create from "./pages/create/Create";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <Navbar />
         <Switch>
           <Route exact path="/">
             <Home />
@@ -29,4 +31,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
