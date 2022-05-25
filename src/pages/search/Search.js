@@ -8,7 +8,7 @@ export default function Search() {
   const queryParams = new URLSearchParams(queryString);
   const query = queryParams.get("query");
 
-  const url = `http://localhost:3000/recipes?q=${query}`;
+  const url = `http://localhost:3000/recipes?q=${query}`; // q is a json-server (npm) specific keyword, for searchiing terms.
   const { error, isPending, data: recipes } = useFetch(url);
 
   return (
